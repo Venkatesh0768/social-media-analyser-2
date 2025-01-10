@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "151600293989",
+    "project_id": "social-media-analyser-11938",
+    "storage_bucket": "social-media-analyser-11938.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151600293989:android:c8af1f1708d7dc18bdbe8c",
+        "android_client_info": {
+          "package_name": "com.example.social_media"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRnmsAZ6UnhPCePCL785uYPQUnTTbVBzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

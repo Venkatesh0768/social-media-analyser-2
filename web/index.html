@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <!-- Add security and CORS headers -->
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self' https: data: blob: 'unsafe-inline' 'unsafe-eval'; 
+    script-src 'self' https: 'unsafe-inline' 'unsafe-eval';
+    connect-src 'self' https: 'unsafe-inline';
+    img-src 'self' https: data: blob: 'unsafe-inline';
+    frame-src 'self' https:;
+    style-src 'self' https: 'unsafe-inline';">
+  
+  <!-- Add CORS headers -->
+  <meta http-equiv="Access-Control-Allow-Origin" content="*">
+  <meta http-equiv="Access-Control-Allow-Methods" content="GET, POST, OPTIONS">
+  <meta http-equiv="Access-Control-Allow-Headers" content="Origin, Authorization, Content-Type">
+
+  <!-- Meta tags -->
+  <meta name="description" content="A new Flutter project.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="social_media">
+  
+  <!-- Icons and manifest -->
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>social_media</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Initialize environment variables -->
+  <script>
+    // Load environment variables from .env file
+    fetch('/.env')
+      .then(response => response.text())
+      .then(text => {
+        const env = {};
+        text.split('\n').forEach(line => {
+          const [key, value] = line.split('=');
+          if (key && value) {
+            env[key.trim()] = value.trim();
+          }
+        });
+        window.ENV = env;
+      });
+  </script>
+</head>
+<body>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
